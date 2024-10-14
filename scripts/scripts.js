@@ -19,8 +19,8 @@ function Clock() {
     this.second = time.getSeconds();
     this.period = (this.hour < 12) ? '"AM"' : '"PM"';
     this.day = time.getDate();
-    this.weekday = addSemicolon(time.toLocaleString(default_lang, { weekday: default_format }))
-    this.month = addSemicolon(time.toLocaleString(default_lang, { month: default_format }))
+    this.weekday = addDoubleQuotes(time.toLocaleString(default_lang, { weekday: default_format }))
+    this.month = addDoubleQuotes(time.toLocaleString(default_lang, { month: default_format }))
     this.year = time.getFullYear();
     this.timezone = `"GMT${timeZoneSign}${timeZoneOffsetHours.toString().padStart(2, '0')}"`;
     this.unix = Math.floor(Date.now() / 1000);
@@ -158,7 +158,7 @@ function use12hFormat(flag, object) {
     }
 }
 
-function addSemicolon(txt) {
+function addDoubleQuotes(txt) {
     return `"${txt}"`
 }
 
