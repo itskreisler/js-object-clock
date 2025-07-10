@@ -1,7 +1,7 @@
 /**
  * @type {"es-CO" | "en-US" | "ja-JP"}
  */
-const default_lang = 'en-US'
+const default_lang = 'es-CO'
 /**
  * @type {"long" | "short"}
  */
